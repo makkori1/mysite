@@ -1,0 +1,58 @@
+.c-ham{
+  position: absolute;
+  z-index: index($INDEXS, body);
+  top: 30px;
+  right: 30px;
+  width: 55px;
+  height: 55px;
+  justify-content: center;
+  align-items: center;
+  background-color: $COLOR_BLACK;
+  display: none;
+  @include mq('tab'){
+    display: flex;
+  }
+  &.-open{
+    & .-top{
+      transform: translateY(9px) rotate(45deg);
+    }
+    & .-center{
+      opacity: 0;
+    }
+    & .-bottom{
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  }
+ 
+}
+.c-ham__wrap{
+  width: 23px;
+  height: 20px;
+  text-align: center;
+  position: relative;
+  line-height: 0;
+
+
+}
+
+.c-ham__item{
+  width: 23px;
+  height: 2px;
+  background-color: $COLOR_BASIC_WHITE;
+  display: inline-block;
+  line-height: 0;
+  position: absolute;
+  left: 0;
+  transition: transform .4s, opacity .4s;
+  &.-top{
+    top: 0;
+  }
+  &.-center{
+    top: calc(50% - 2px);
+    width: 17px;
+  }
+  &.-bottom{
+    bottom: 0;
+  }
+ 
+}

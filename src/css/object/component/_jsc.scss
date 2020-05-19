@@ -1,0 +1,62 @@
+.jsc-fadein{
+  opacity: 0;
+  transform: translateY(200px);
+  transition: transform 2s , opacity 2s;
+}
+.jsc-scrollin{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.p-index__mv-contents-ttl{
+  &.jsc-fade__main-ttl{
+    transform: translate(0, 0);
+    transition: transform 1s ease-in-out;
+    &::after{
+      transition-delay:.7s;
+      transform: translate(-105%, 0);
+    }
+
+}
+}
+.c-title{
+  &.-left{
+    &.jsc-fade__heading{
+      transform: translate(0, 0);
+      transition: transform 1.2s;
+    }
+  }
+  &.-right{
+    &.jsc-fade__heading{
+      transform: translate(0, 0);
+      transition: transform 1.2s;
+    }
+  }
+}
+
+.jsc-fade__sub-title{
+    transform: translateY(0);
+    transition: transform 1s ease-in-out .5s;
+    &::before{
+      transform: translate(0, 100%);
+      transition: transform .6s ease-in-out 1.2s;
+    }
+}
+
+.jsc-mobilenav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $COLOR_BASIC_WHITE;
+    z-index: index($INDEXS, body);
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity .4s ease;
+    @include mq('tab'){
+      opacity: 1;
+    }
+
+  }
+

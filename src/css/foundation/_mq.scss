@@ -1,0 +1,17 @@
+$layout-width-inner: 1180px;
+$breakpoints: (
+  "sp-s": "screen and (max-width: 340px)",
+  "sp": "screen and (max-width: 375px)",
+  "tab": "screen and (max-width: 767px)",
+  "tab-l": "screen and (max-width: 950px)",
+  "inner": "screen and (max-width: #{$layout-width-inner - 1px})",
+  "pc": "screen and (min-width: #{$layout-width-inner})"
+);
+
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+

@@ -1,0 +1,336 @@
+
+.p-index__border-top{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: index($INDEXS, header);
+  width: 100%;
+  height: 15px;
+  background-color: $COLOR_BLACK;
+}
+.p-index__border-right{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: index($INDEXS, header);
+  width: 15px;
+  height: 100%;
+  background-color: $COLOR_BLACK;
+}
+.p-index__border-left{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: index($INDEXS, header);
+  width: 15px;
+  height: 100%;
+  background-color: $COLOR_BLACK;
+}
+//mv
+.p-index__mv-vegas{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.p-index__mv-contents-wrap{
+  padding: 0 30px;
+  
+}
+
+.p-index__mv-contents-inner{
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.p-index__mv-contents{
+  position: absolute;
+  top: 50%;
+ 
+}
+.p-index__mv-contents-ttl{
+  position: relative;
+  overflow: hidden;
+  transform: translate(-100%, 0);
+  transition: transform 1.2s ease-in-out;
+  &::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;    
+    background-color: $COLOR_BASIC_WHITE;
+    transition: transform 1.2s ease-in-out;
+    transform: translate(0, 0);
+  }
+
+}
+
+.p-index__mv-contents-text{
+  color: $COLOR_BASIC_WHITE;
+  font-weight: bold;
+  &.-top{
+    font-size: 7rem;
+    line-height: 1.3;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    @include mq('tab'){
+      font-size: 3.5rem;
+    }
+  }
+  &.-bottom{
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    @include mq('tab'){
+      font-size: 1.5rem;
+    }
+  }
+}
+.p-index__mv-scroll{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.p-index__mv-scroll-text{
+  position: relative;
+  font-size: 15px;
+}
+.p-index__mv-scrollbar{
+  overflow: hidden;
+  position: relative;
+  top: 15px;
+  height: 75px;
+  width: 10px;
+  margin: 0 auto;
+  text-align: center;
+  &::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 1px;
+    height: 65px;
+    background-color: $COLOR_BLACK;
+    animation: move 1.5s infinite;
+  }
+}
+@keyframes move{
+  0%{
+    transform: translateY(-100%);
+  }
+  100%{
+    transform: translateY(100%);
+  }
+}
+// *mv
+.p-index__main{
+  overflow: hidden;
+}
+//about
+.p-index__about{
+  margin-top: 200px;
+}
+.p-index__about-img{
+  max-width: 400px;
+  margin-right: 45px;
+  @include mq('tab'){
+    margin-right: 0;
+    margin-bottom: 100px;
+  }
+}
+.p-index__about-text{
+  max-width: 631px;
+  line-height: 2.3;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.p-index__about-contents{
+  padding: 0 30px;
+}
+.p-index__about-contents-width{
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mq('tab'){
+    flex-direction: column;
+  }
+}
+//*about
+
+//works
+.p-index__works{
+  margin-top: 300px;
+  margin-bottom: 200px;
+}
+.p-index__works-wrap{
+  padding: 0 30px;
+  margin-top: 100px;
+}
+.p-index__works-lists{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1180px;
+  margin: auto;
+  @include mq('tab'){
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.p-index__works-list{
+  width: calc(50% - 90px);
+  margin-bottom: 80px;
+  box-shadow: $COLOR_NAIVIE 10px 10px 20px;
+  overflow: hidden;
+  transition: transform .6s ease;
+  &:hover{
+    transform: translateY(-10px);
+    & .p-index__works-img{
+      transform: scale(1.1);
+      transition: transform .6s ease;
+    }
+  }
+  &:nth-of-type(odd){
+    margin-right: 5%;
+    @include mq('tab'){
+      margin-right: 0;
+    }
+  }
+  @include mq('tab'){
+    max-width: 500px;
+    width: initial;
+    margin-bottom: 50px;
+  }
+}
+.p-index__works-link{
+  display: inline-block;
+  max-width: 500px;
+  transition: transform .3s ease;
+}
+.p-index__works-img{
+  max-width: 500px;
+}
+.p-index__works-content{
+  padding: 30px;
+  max-width: 500px;
+}
+.p-index__works-content-title{
+  font-weight: bold;
+  font-size: 20px;
+  color: $COLOR_PRIMARY_BLACK;
+  @include mq('tab-l'){
+    font-size: 1.5rem;
+  }
+}
+.p-index__works-content-text{
+  font-weight: bold;
+  font-size: 15px;
+  color: $COLOR_NAIVIE;
+  margin-top: 15px;
+}
+//*works
+
+//service
+.p-index__service{
+  margin-top: 100px;
+}
+.p-index__service-content{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 100px;
+  padding: 0 30px;
+  @include mq('tab'){
+    flex-direction: column;
+  }
+}
+.p-index__service-content-box-01{
+  margin-right: 100px;
+  @include mq('tab'){
+    margin-right: 0;
+  }
+}
+.p-index__service-icon{
+  font-size: 150px;
+  &.-right{
+    color: #1282d6;
+  }
+}
+.p-index__service-content-box-02{
+  @include mq('tab'){
+    margin-top: 80px;
+  }
+
+}
+.p-nidex__service-content-title{
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 80px;
+}
+.p-index__serivce-content-text{
+  font-size: 1.5rem;
+  line-height: 1.68;
+  max-width: 400px;
+  text-align: left;
+  margin-top: 45px;
+  margin: 45px auto auto;
+}
+.p-index__service-content-skill{
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: left;
+  margin-top: 40px;
+  @include mq('tab'){
+    text-align: center;
+  }
+}
+.p-index__service-content-skill-text{
+  font-size: 1.5rem;
+  text-align: left;
+  margin-top: 25px;
+  @include mq('tab'){
+    text-align: center;
+  }
+}
+
+//*service
+
+.p-index__price{
+  margin-top: 200px;
+  margin: 200px 0 100px;
+}
+.p-index__price-wrap{
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 1180px;
+  margin: 100px auto  auto;
+}
+.p-index__price-table-header{
+  border: 1px solid $COLOR_PRIMARY_BLACK;
+  background-color: $COLOR_NAIVIE;
+  padding: 15px 50px;
+  @include mq('tab'){
+    padding: 15px 20px;
+  }
+}
+.p-index__price-table-text{
+  padding: 15px 50px;
+  border: 1px solid $COLOR_PRIMARY_BLACK;
+  @include mq('tab'){
+    padding: 15px 20px;
+  }
+}
+.p-index__price-text{
+  text-align: center;
+  margin-top: 50px;
+  font-size: 18px;
+}
