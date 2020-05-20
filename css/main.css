@@ -1585,6 +1585,10 @@ body.vegas-container > .vegas-slide {
   margin-top: 15px;
 }
 
+.p-index__works-content-text.-detail {
+  color: #222222;
+}
+
 .p-index__service {
   margin-top: 100px;
 }

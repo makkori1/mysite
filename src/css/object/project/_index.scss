@@ -233,6 +233,9 @@
   font-size: 15px;
   color: $COLOR_NAIVIE;
   margin-top: 15px;
+  &.-detail{
+    color: $COLOR_PRIMARY_BLACK;
+  }
 }
 //*works
 
