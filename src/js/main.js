@@ -1,12 +1,12 @@
 $(function(){
   $('#jsi-vegas').vegas({
     slides: [
-      {src: '../src/img/page/mv/dron-sea.jpg'},
-      {src: '../src/img/page/mv/night-waterfall.jpg'}, 
-      {src: '../src/img/page/mv/green-waterfall.jpg'},
-      {src: '../src/img/page/mv/mount-fuji.jpg'},
-      {src: '../src/img/page/mv/sea-sunset.jpg'}, 
-      {src: '../src/img/page/mv/sunset-waterfall.jpg'}
+      {src: './src/img/page/mv/dron-sea.jpg'},
+      {src: './src/img/page/mv/night-waterfall.jpg'}, 
+      {src: './src/img/page/mv/green-waterfall.jpg'},
+      {src: './src/img/page/mv/mount-fuji.jpg'},
+      {src: './src/img/page/mv/sea-sunset.jpg'}, 
+      {src: './src/img/page/mv/sunset-waterfall.jpg'}
      
     ],
     transition: 'fade',

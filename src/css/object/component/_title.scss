@@ -12,7 +12,7 @@
     &::before{
       left: 64.88%;
       width: 10%;
-      background: no-repeat url('../src/img/page/about/triungle-left.png');
+      background: no-repeat url('./src/img/page/about/triungle-left.png');
     }
   }
   &.-right{
@@ -28,7 +28,7 @@
     &::before{
       right: 64.93%;
       width: 70px;
-      background: no-repeat url('../src/img/page/about/triunglr-right.png');
+      background: no-repeat url('./src/img/page/about/triunglr-right.png');
     }
   }
   &::after{
